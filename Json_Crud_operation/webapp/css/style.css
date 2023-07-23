@@ -1,0 +1,28 @@
+/* Enter your custom styles here */
+.lbl{
+	padding:12px;
+    /*padding-left:12px;*/
+    /*padding-top:10px;*/
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+}
+.inp{
+	padding-right:12px;
+}
+.lbl1{
+	/*padding:5px;*/
+    /*padding-left:10px;*/
+    /*padding-top:10px;*/
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+}
+/*.lbladdr{*/
+/*	padding:5px;*/
+    /*padding-left:10px;*/
+    /*padding-top:10px;*/
+    /*display: inline-block;*/
+    /*width: 200px;*/
+    /*text-align: right;*/
+/*}*/

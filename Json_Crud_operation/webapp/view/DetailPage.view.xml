@@ -1,0 +1,92 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form"
+	controllerName="JSON_Crud.Json_Crud_operation.controller.DetailPage" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page>
+		<customHeader>
+			<Toolbar>
+				<Button icon="sap-icon://navigation-left-arrow" type="Default" press="onNavBack"/>
+				<ToolbarSpacer/>
+				<Title text="Employee Details"/>
+				<ToolbarSpacer/>
+				<Title text="Id:- {newModel>/Id}"/>
+			</Toolbar>
+		</customHeader>
+		<content>
+			<IconTabBar>
+				<items>
+					<IconTabFilter icon="sap-icon://employee" key="info">
+						<Title text="Personal Details"/>
+						<HBox>
+							<Label class="lbl" text="Name:"/>
+							<Text class="lbl" text="{newModel>/Name}"/>
+						</HBox>
+						<HBox>
+							<Label class="lbl" text="Gender:"/>
+							<Text class="lbl" text="{newModel>/Gender}"/>
+						</HBox>
+						<HBox>
+							<Label class="lbl" text="Date of Birth:"/>
+							<Text class="lbl" text="{newModel>/DOB}"/>
+						</HBox>
+					</IconTabFilter>
+					<IconTabFilter icon="sap-icon://hint" key="info">
+						<Title text="Employment Information"/>
+						<HBox>
+							<Label class="lbl" text="Job Role:"/>
+							<Text class="lbl" text="{newModel>/JobRole}"/>
+						</HBox>
+						<HBox>
+							<Label class="lbl" text="Primary Skill:"/>
+							<Text class="lbl" text="{newModel>/PSkills}"/>
+						</HBox>
+						<HBox>
+							<Label class="lbl" text="Secondar Skill:"/>
+							<Text class="lbl" text="{newModel>/SSkills}"/>
+						</HBox>
+						<HBox>
+							<Label class="lbl" text="Office Location:"/>
+							<Text class="lbl" text="{newModel>/OfficeLoc}"/>
+						</HBox>
+						<HBox>
+							<Label class="lbl" text="Office City:"/>
+							<Text class="lbl" text="{newModel>/City}"/>
+						</HBox>
+					</IconTabFilter>
+					<IconTabFilter icon="sap-icon://work-history" key="info">
+						<Title text="Project Details"/>
+						<HBox>
+							<Label class="lbl" text="Project Name:"/>
+							<Text class="lbl" text="{newModel>/Project}"/>
+						</HBox>
+						<HBox>
+							<Label class="lbl" text="Used Skill in Project:"/>
+							<Text class="lbl" text="{newModel>/UsedSkills}"/>
+						</HBox>
+						<HBox>
+							<Label class="lbl" text="Project Lead:"/>
+							<Text class="lbl" text="{newModel>/ProjectLead}"/>
+						</HBox>
+					</IconTabFilter>
+					<IconTabFilter icon="sap-icon://contacts" key="info">
+						<Title text="Contact Details"/>
+						<HBox>
+							<Label class="lbl" text="Mobile Number:"/>
+							<Text class="lbl" text="{newModel>/Mob}"/>
+						</HBox>
+						<HBox>
+							<Label class="lbl" text="Alternate Mobile Number:"/>
+							<Text class="lbl" text="{newModel>/AltMob}"/>
+						</HBox>
+						<HBox>
+							<Label class="lbl" text="Email Id:"/>
+							<Text class="lbl" text="{newModel>/Email}"/>
+						</HBox>
+						<HBox>
+							<Label class="lbl" text="Address:"/>
+							<Text class="lbl" text="{newModel>/Address}"/>
+						</HBox>
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+		</content>
+	</Page>
+</mvc:View>

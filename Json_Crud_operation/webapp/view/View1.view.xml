@@ -1,0 +1,44 @@
+<mvc:View controllerName="JSON_Crud.Json_Crud_operation.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Page id="page">
+		<customHeader>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<Title text="CRUD Operation Demo"/>
+				<ToolbarSpacer/>
+			</Toolbar>
+		</customHeader>
+		<content>
+			<Table id="employeeList" items="{EmpDet>/Employee}">
+				<headerToolbar>
+					<Toolbar>
+						<Title text="Employee Info"/>
+						<ToolbarSpacer/>
+						<SearchField width="20%" liveChange="onLiveChange" placeholder="Search Name" enableSuggestions="true"/>
+						<Button type="Accept" icon="sap-icon://edit" press="onEdit"/>
+						<Button type="Emphasized" icon="sap-icon://add-employee" press="onClick"/>
+					</Toolbar>
+				</headerToolbar>
+				<columns>
+					<Column hAlign="Left">
+						<Label text="Employee Id"/>
+					</Column>
+					<Column hAlign="Center">
+						<Label text="Employee Name"/>
+					</Column>
+					<Column hAlign="Center">
+						<Label text="City"/>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem type="Active" press="onNavigate">
+						<cells>
+							<Label text="{EmpDet>Id}"/>
+							<Label text="{EmpDet>Name}"/>
+							<Label text="{EmpDet>City}"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+	</Page>
+</mvc:View>

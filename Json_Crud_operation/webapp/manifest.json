@@ -1,0 +1,111 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "JSON_Crud.Json_Crud_operation",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		},
+		"crossNavigation": {
+			"inbounds": {}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"flexEnabled": false,
+		"rootView": {
+			"viewName": "JSON_Crud.Json_Crud_operation.view.BaseView",
+			"type": "XML",
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.65.6",
+			"libs": {
+				"sap.m": {},
+				"sap.ui.core": {},
+				"sap.ui.layout": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"EmpDet": {
+				"type": "sap.ui.model.json.JSONModel",
+				"settings": {},
+				"uri": "model/EmployeeDetail.json",
+				"preload": false
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"type": "View",
+				"viewType": "XML",
+				"viewPath": "JSON_Crud.Json_Crud_operation.view",
+				"controlAggregation": "pages",
+				"controlId": "app"
+			},
+			"routes": [
+				{
+					"name": "View1",
+					"pattern": "",
+					"target": [
+						"View1"
+					]
+				},
+				{
+					"name": "Detail",
+					"pattern": "detail",
+					"target": [
+						"Detail"
+					]
+				}
+			],
+			"targets": {
+				"View1": {
+					"viewType": "XML",
+					"viewName": "View1"
+				},
+				"Detail": {
+					"viewType": "XML",
+					"viewName": "DetailPage"
+				}
+			}
+		}
+	},
+	"sap.platform.abap": {
+		"uri": "/sap/bc/ui5_ui5/sap/zjson_demo/webapp",
+		"_version": "1.1.0"
+	}
+}

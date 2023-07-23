@@ -1,0 +1,85 @@
+<core:FragmentDefinition xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Dialog >
+		<customHeader>
+			<Toolbar>
+				<Title text="Enter Employee Details"/>
+				<ToolbarSpacer/>
+				<Label text="{EmpDet>/newData/Id}"/>
+			</Toolbar>
+		</customHeader>
+		<f:SimpleForm editable="true" layout="ResponsiveGridLayout">
+			<f:content>
+				<HBox>
+					<VBox>
+						<HBox>
+							<Label required="true" class="lbl" text="Employee Name:"/>
+							<Input class="inp" id="inp1" value="{EmpDet>/newData/Name}" liveChange="saveInp1"/>
+						</HBox>
+						<HBox>
+							<Label required="true" class="lbl" text="City:"/>
+							<Input class="inp" id="inp2" value="{EmpDet>/newData/City}" liveChange="saveInp2"/>
+						</HBox>
+						<HBox>
+							<Label required="true" class="lbl" text="Gender:"/>
+							<Input class="inp" id="inp3" value="{EmpDet>/newData/Gender}" liveChange="saveInp3"/>
+						</HBox>
+						<HBox>
+							<Label required="true" class="lbl" text="Date of Birth:"/>
+							<DatePicker width="87%" class="inp" id="inp4" value="{EmpDet>/newData/DOB}" />
+						</HBox>
+						<HBox>
+							<Label required="true" class="lbl" text="Job Role:"/>
+							<Input class="inp" id="inp5" value="{EmpDet>/newData/JobRole}" liveChange="saveInp5"/>
+						</HBox>
+						<HBox>
+							<Label required="true" class="lbl" text="Primary Skills:"/>
+							<Input class="inp" id="inp6" value="{EmpDet>/newData/PSkills}" liveChange="saveInp6"/>
+						</HBox>
+						<HBox>
+							<Label required="true" class="lbl" text="Secondary Skills:"/>
+							<Input class="inp" id="inp7" value="{EmpDet>/newData/SSkills}" liveChange="saveInp7"/>
+						</HBox>
+					</VBox>
+					<VBox>
+						<HBox>
+							<Label required="true" class="lbl" text="Office Location:"/>
+							<Input class="inp" id="inp8" value="{EmpDet>/newData/OfficeLoc}" liveChange="saveInp8"/>
+						</HBox>
+						<HBox>
+							<Label required="true" class="lbl" text="Project:"/>
+							<Input class="inp" id="inp9" value="{EmpDet>/newData/Project}" liveChange="saveInp9"/>
+						</HBox>
+						<HBox>
+							<Label required="true" class="lbl" text="Used Skills:"/>
+							<Input class="inp" id="inp10" value="{EmpDet>/newData/UsedSkills}" liveChange="saveInp10"/>
+						</HBox>
+						<HBox>
+							<Label required="true" class="lbl" text="Project Lead:"/>
+							<Input class="inp" id="inp11" value="{EmpDet>/newData/ProjectLead}" liveChange="saveInp11"/>
+						</HBox>
+						<HBox>
+							<Label required="true" class="lbl" text="Mobile Number:"/>
+							<Input type="Number" maxLength="10" class="inp" id="inp14" value="{EmpDet>/newData/Mob}" liveChange="saveInp12"/>
+						</HBox>
+						<HBox>
+							<Label required="true" class="lbl" text="Alt Mobile Number:"/>
+							<Input type="Number" maxLength="10" class="inp" id="inp15" value="{EmpDet>/newData/AltMob}" liveChange="saveInp13"/>
+						</HBox>
+						<HBox>
+							<Label required="true" class="lbl" text="Email ID:"/>
+							<Input class="inp" id="inp16" value="{EmpDet>/newData/Email}" liveChange="saveInp14"/>
+						</HBox>
+					</VBox>
+				</HBox>
+				<Label required="true" class="lbl" text="Address"/>
+				<TextArea width="auto" class="inp" id="inp17" value="{EmpDet>/newData/Address}" liveChange="saveInp15"/>
+			</f:content>
+		</f:SimpleForm>
+		<Toolbar>
+			<Button type="Emphasized" text="Add" press="onAdd"/>
+			<ToolbarSpacer/>
+			<Button type="Reject" text="Cancel" press="onCancel"/>
+		</Toolbar>
+	</Dialog>
+</core:FragmentDefinition>
